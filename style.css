@@ -20,6 +20,12 @@ h6
 }
 
 /* Sections  */
+section
+{
+    min-width: 84%;
+    margin: 0 auto;
+}
+
 section:nth-child(even)
 {
     background: lightblue;
@@ -42,6 +48,7 @@ section:nth-child(odd)
     grid-area: home;
     background: gray;
     height: 450px;
+    width: 100%;
 }
 .services
 {
@@ -140,6 +147,8 @@ section:nth-child(odd)
     float: left;
     padding: 0 20px;
 } 
+
+
 
 
 
