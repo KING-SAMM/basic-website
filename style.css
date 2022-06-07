@@ -107,16 +107,39 @@ section:nth-child(odd)
     }
 }
 
+
+/* Navigation sub-grid */
+/* Grid items  */
+.logo
+{
+    grid-area: logo;
+}
+
+.menu
+{
+    grid-area: menu;
+    justify-self: end;
+}
+
 .navbar 
 {
-    padding: 10px 20px;
+    padding: 20px 20px;
+    background: black;
+    color: white;
+
+    display: inline-grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 1;
+    grid-template-areas: 
+    "logo menu";
 }
 
 .navbar > ul > li
 {
     list-style: none;
     float: left;
-}
+    padding: 0 20px;
+} 
 
 
 
