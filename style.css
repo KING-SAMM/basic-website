@@ -1,0 +1,123 @@
+/* Resets */
+
+*,
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+
+}
+
+/* Sections  */
+section:nth-child(even)
+{
+    background: lightblue;
+}
+
+section:nth-child(odd)
+{
+    background: #ccc;;
+}
+
+
+/* Grid Layout  */
+/* Grid items  */
+.navbar
+{
+    grid-area: navbar;
+}
+.home
+{
+    grid-area: home;
+    background: gray;
+    height: 450px;
+}
+.services
+{
+    grid-area: services;
+}
+.about
+{
+    grid-area: about;
+}
+.products
+{
+    grid-area: products;
+}
+.footer
+{
+    grid-area: footer;
+}
+
+/* Mobile phones view  */
+.grid
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "navbar"
+    "home"
+    "services"
+    "about"
+    "products"
+    "footer";
+}
+
+/* Tablets and iPads */
+@media (min-width: 768px)
+{
+    .grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "navbar navbar"
+        "home home"
+        "services services"
+        "about about"
+        "products products"
+        "footer footer";
+    }
+}
+
+/* Desktops and laptops */
+@media (min-width: 992px)
+{
+    .grid
+    {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "home home home"
+        "services services services"
+        "about about about"
+        "products products products"
+        "footer footer footer";
+    }
+}
+
+.navbar 
+{
+    padding: 10px 20px;
+}
+
+.navbar > ul > li
+{
+    list-style: none;
+    float: left;
+}
+
+
+
+
