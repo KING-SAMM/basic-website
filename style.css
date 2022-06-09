@@ -344,7 +344,7 @@ section:nth-child(odd)
     flex-flow: row wrap;
     justify-content: space-evenly;
 
-    /* background: #eee; */
+    background: #eee;
     box-sizing: border-box;
 }
 
@@ -362,7 +362,7 @@ section:nth-child(odd)
     padding: 15px;
     
     
-    box-shadow: 5px 10px 25px 0px #bbb;
+    box-shadow: 5px 10px 25px 0px #aaa;
 }
 
 .clients .clients_grid_item img
