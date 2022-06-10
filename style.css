@@ -193,7 +193,7 @@ section:nth-child(odd)
 /* Home Section */
 .home
 {
-    background: url('/images/home_bg9.PNG');
+    background: url('/images/camera.PNG');
     background-repeat: no-repeat;
     background-size: cover;
 
