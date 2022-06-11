@@ -147,46 +147,70 @@ section:nth-child(odd)
 /* Grid items  */
 .navbar_logo
 {
-    grid-area: logo;
+    grid-area: navbar_logo;
 }
 
 .navbar_menu
 {
-    grid-area: menu;
-    justify-self: end;
+    grid-area: navbar_menu;
+
 }
 
 .navbar 
 {
-    padding: 20px 20px;
+    padding: 0px 20px;
     background: rgba(0, 0, 128, 0.0);
     color: white;
     position: absolute;
     width: 100%;
 
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 200px auto;
     grid-template-rows: 1;
     grid-template-areas: 
-    "logo menu";
+    "navbar_logo navbar_menu";
 }
 
-.navbar > ul > li
+.navbar .navbar_menu
+{
+    align-self: stretch;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+}
+
+.navbar > .navbar_menu > li
 {
     list-style: none;
-    float: left;
-    padding: 0 20px;
+    /* float: left; */
+    padding: 0 20px;    
 } 
 
-.navbar > ul > li > a
+.navbar > .navbar_menu > li > a
 {
     text-decoration: none;
     color: white;
 } 
 
-.navbar_logo > img
+.navbar_logo 
 {
-    width: 40px;
+    font-size: 30px;
+    font-weight: 100;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar_logo > div
+{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.navbar_logo > div > span
+{
+    font-weight: 700;
 }
 
 
@@ -199,6 +223,18 @@ section:nth-child(odd)
 
     height: 100vh;
     width: 100%;
+}
+
+.home h1
+{
+    position: absolute;
+    top: 120px;
+    left: 100px;
+
+    /* font-style: italic; */
+    font-size: 120px;
+    color: white;
+    opacity: 0.4;
 }
 
 /* Services Section subgrid */
@@ -454,6 +490,7 @@ section:nth-child(odd)
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    grid-gap: 20px;
     grid-template-areas: 
     "contact_text contact_text"
     "contact_map contact_details";
@@ -478,5 +515,166 @@ section:nth-child(odd)
 .contact .contact_map
 {
     width: 100%;
-    border: 10px solid navy;
+    border-radius: 20px;
+    border: 20px solid navy;
+}
+
+.contact .contact_details
+{
+    width: 100%;
+    padding: 30px;
+    background: rgba(0, 0, 128, 0.4);
+    border-radius: 20px;
+}
+
+.contact .contact_details div
+{
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    color:rgba(0, 0, 128, 1.0);
+    margin-bottom: 20px;
+}
+
+.contact .contact_details span
+{
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.contact .contact_details > h1
+{
+    text-align: center;
+    color: rgba(0, 0, 128, 0.8);
+    letter-spacing: -1px;
+    font-weight: 200;
+}
+
+.contact .contact_details > h1 > span
+{
+    font-size: 40px;
+    color: rgba(0, 0, 128, 0.8);
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin-left: 0;
+}
+
+.contact .contact_details .line 
+{
+    width: 200px;
+    height: 3px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 128, 1.0);
+}
+
+
+
+/* Footer  */
+/* Footer subgrid */
+.footer_logo
+{
+    grid-area: footer_logo;
+}
+.footer_brand
+{
+    grid-area: footer_brand;
+}
+.line_desc
+{
+    grid-area: line_desc;
+}
+.footer_social
+{
+    grid-area: footer_social;
+}
+.footer_copyright
+{
+    grid-area: footer_copyright;
+}
+
+.footer
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". footer_logo ."
+    ". footer_brand ."
+    ". line_desc. "
+    ". footer_social ."
+    ". footer_copyright .";
+    
+
+    width: 100%;
+    height: 100vh;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    color: white;
+    background: rgba(0, 0, 128, 1.0);
+
+    position: relative;
+}
+
+.footer .footer_logo,
+.footer .footer_brand,
+.footer .line_desc,
+.footer .footer_social,
+.footer .footer_copyright
+{
+    justify-self: center;
+}
+
+.footer .footer_logo
+{
+    font-size: 100px;
+    margin-bottom: -60px;
+}
+
+.footer .footer_brand
+{
+    font-size: 50px;
+    margin-bottom: -40px;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: white;
+}
+.footer .footer_brand span
+{
+    font-weight: 700;
+}
+
+.footer .line_desc
+{
+    width: 200px;
+    height: 3px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: rgb(252, 252, 255);
+}
+
+.footer .footer_social
+{
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 45px;
+    width: 100%;
+}
+
+.footer .footer_social > a
+{
+    color: white;
+    cursor: pointer;
+}
+
+.footer .footer_copyright
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: -10px;
 }
