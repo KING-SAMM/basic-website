@@ -229,6 +229,16 @@ section
     opacity: 0.8;
 }
 
+/* Extra large screens  */
+@media (min-width: 1200px)
+{
+    .home h1 
+    {
+        top: 200px;
+        font-size: 160px;
+    }
+}
+
 /* Services Section subgrid */
 .services .services_cards
 {
