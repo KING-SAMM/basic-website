@@ -42,16 +42,6 @@ section
     padding: 30px 0;
 }
 
-section:nth-child(even)
-{
-    /* background: lightblue; */
-}
-
-section:nth-child(odd)
-{
-    /* background: #ccc;; */
-}
-
 
 /* Grid Layout  */
 /* Grid items  */
@@ -158,10 +148,12 @@ section:nth-child(odd)
 
 .navbar 
 {
-    padding: 0px 20px;
-    background: rgba(0, 0, 128, 0.0);
+    padding: 5px 20px;
+    background: rgba(0, 0, 0, 1.0);
     color: white;
-    position: absolute;
+    position: sticky;
+    top: 0;
+    z-index: 999;
     width: 100%;
 
     display: grid;
@@ -217,7 +209,7 @@ section:nth-child(odd)
 /* Home Section */
 .home
 {
-    background: url('/images/camera.PNG');
+    background: url("/images/camera.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -234,7 +226,17 @@ section:nth-child(odd)
     /* font-style: italic; */
     font-size: 120px;
     color: white;
-    opacity: 0.4;
+    opacity: 0.8;
+}
+
+/* Extra large screens  */
+@media (min-width: 1200px)
+{
+    .home h1 
+    {
+        top: 200px;
+        font-size: 160px;
+    }
 }
 
 /* Services Section subgrid */
@@ -401,6 +403,11 @@ section:nth-child(odd)
     margin-bottom: 40px;
 }
 
+.about > h1
+{
+    margin-top: 20px;
+}
+
 .about  .about_image
 {
     width: 100%;
@@ -432,6 +439,7 @@ section:nth-child(odd)
 .clients h1
 {
     text-align: center;
+    margin-top: 20px;
 }
 
 .clients .clients_grid
@@ -501,6 +509,11 @@ section:nth-child(odd)
 .contact .contact_text
 {
     text-align: center;
+}
+
+.contact .contact_text > h1
+{
+    margin-top: 20px;
 }
 
 .contact .contact_text > p
